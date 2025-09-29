@@ -1,6 +1,6 @@
 .menu-toggle {
   border: none;
-  color: rgb(51, 0, 255);
+  color: rgb(0, 0, 0);
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   display: flex;
@@ -12,14 +12,13 @@
   top: 0;
   padding: 10px;
   z-index: 10;
-
 }
 
-.btn-close{
+.btn-close {
   margin-left: 0;
 }
 
-.logout{
+.logout {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -33,52 +32,51 @@
   justify-content: center;
   align-items: center;
   object-fit: contain;
-  
 }
 .navbar {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
-.header{
-position: fixed;
+.header {
+  position: fixed;
 }
 
 .offcanvas-body {
   padding: 20px;
-  display: flex; 
-  flex-direction: column; 
-  gap: 15px; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .offcanvas-body .btn-primary {
-  background-color: #007bff; 
-  color: white; 
-  border: none; 
-  padding: 12px 20px; 
-  border-radius: 8px; 
+  background-color: #2701ff;
+  color: rgb(255, 253, 253);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
   font-size: 1rem;
-  font-weight: 500; 
-  transition: background-color 0.3s ease, transform 0.2s ease; 
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .offcanvas-body .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #67a7ec;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .offcanvas-body .btn-primary:active {
-  background-color: #004085;
-  transform: translateY(0); 
+  background-color: #1177dd;
+  transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .offcanvas-body .logout.btn-danger {
-  background-color: #dc3545; 
+  background-color: #e40c21;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -87,12 +85,12 @@ position: fixed;
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-align: center;
-  margin-top: auto; 
+  margin-top: auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .offcanvas-body .logout.btn-danger:hover {
-  background-color: #c82333; 
+  background-color: #c82333;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -105,11 +103,11 @@ position: fixed;
 
 @media (max-width: 768px) {
   .offcanvas-body {
-    padding: 15px; 
+    padding: 15px;
   }
 
   .offcanvas-body .btn {
     font-size: 0.95rem;
-    padding: 10px 15px; 
-    }
+    padding: 10px 15px;
+  }
 }

@@ -1,47 +1,67 @@
 <div>
-    <app-menu></app-menu>
+  <app-menu></app-menu>
 </div>
-<h1 class="Ford ">DashBoard Ford</h1>
-<hr>
-<section class="d-flex gap-3 justify-content-around "> 
-    <div class="shadow border border-primary-subtle p-3"> 
-        <H2>Veiculos</H2>
-        <select (change)="onChangeSelect($event)">
-            @for (carro of veiculos; track carro.id){
-                <option value="{{ carro.id }}"> {{ carro.vehicle }}</option>
-            }
-        </select>
+
+<h1 class="Ford">Dashboard Ford</h1>
+<hr />
+
+<section class="dashboard-grid">
+  <!-- Card de seleção de veículo -->
+  <div class="card vehicle-card shadow">
+    <h2>Veículos</h2>
+    <div class="select-wrapper">
+      <select (change)="onChangeSelect($event)">
+        @for (carro of veiculos; track carro.id){
+        <option value="{{ carro.id }}">{{ carro.vehicle }}</option>
+        }
+      </select>
     </div>
-    
+  </div>
 
-    <app-card class="shadow border border-primary-subtle p-2"
-     [titulo]=" 'Total de Vendas' " [valor]="veiculoSelecionado.volumetotal"> </app-card>
+  <!-- Cards de métricas -->
+  <app-card
+    class="card shadow"
+    [titulo]="'Total de Vendas'"
+    [valor]="veiculoSelecionado.volumetotal"
+  >
+  </app-card>
 
-    <app-card class="shadow border border-primary-subtle p-2"
-     [titulo]=" 'Conectados' " [valor]="veiculoSelecionado.connected"> </app-card>
+  <app-card
+    class="card shadow"
+    [titulo]="'Conectados'"
+    [valor]="veiculoSelecionado.connected"
+  >
+  </app-card>
 
-    <app-card class="shadow border border-primary-subtle p-2" 
-    [titulo]=" 'Upd. Softwar' " [valor]="veiculoSelecionado.softwareUpdates"> </app-card>
-
-</section> 
-
-<div class="gradient-background d-flex align-items-center justify-content-center">
-    <div class="container text-center">
-
-<section>
-    <img class="imagemCarro" src= "{{veiculoSelecionado.img }}">
+  <app-card
+    class="card shadow"
+    [titulo]="'Atualizações de Software'"
+    [valor]="veiculoSelecionado.softwareUpdates"
+  >
+  </app-card>
 </section>
- 
-<section class="table-section">
-    <app-car-table
-     [vin]="veiculoSelecionado.vin"
-     [lat]="vinInfos.lat"
-     [long]="vinInfos.long"
-     [nivelCombustivel]="vinInfos.nivelCombustivel"
-     [odometro]="vinInfos.odometro"
-     [status]="vinInfos.status"
-     >
-    </app-car-table>
-</section>       
 
+<!-- Seção de carro + tabela -->
+<div class="gradient-background">
+  <div class="container text-center">
+    <section class="car-image-wrapper">
+      <img
+        class="imagemCarro"
+        [src]="veiculoSelecionado.img"
+        alt="Carro Ford"
+      />
+    </section>
 
+    <section class="table-section">
+      <app-car-table
+        [vin]="veiculoSelecionado.vin"
+        [lat]="vinInfos.lat"
+        [long]="vinInfos.long"
+        [nivelCombustivel]="vinInfos.nivelCombustivel"
+        [odometro]="vinInfos.odometro"
+        [status]="vinInfos.status"
+      >
+      </app-car-table>
+    </section>
+  </div>
+</div>

@@ -1,15 +1,14 @@
 .main-content-box {
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
-    
 }
 
 .modal-overlay {
@@ -26,7 +25,7 @@
 }
 
 .modal-content {
-  background-color: white;
+  background-color: rgb(184, 180, 180);
   padding: 2rem;
   border-radius: 5px;
   position: relative;
@@ -49,34 +48,34 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/imagens/Yellow-Ford-Focus-ST.jpg');
+  background-image: url("/imagens/corcelzinho.jpg");
   background-size: cover;
   background-position: center;
   z-index: -1;
   filter: blur(6px);
 }
 
-.Login{
+.Login {
   display: flex;
   justify-content: center;
 }
 
 .switch-form {
-    margin-top: 25px; 
-    text-align: center; 
-    font-size: 0.95em; 
-    color: #6c757d; 
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.95em;
+  color: #6c757d;
 }
 
 .switch-form a {
-    color: #007bff; 
-    text-decoration: none; 
-    font-weight: 600; 
-    cursor: pointer; 
-    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out; 
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
 }
 
 .switch-form a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+  color: #0056b3;
+  text-decoration: underline;
 }
