@@ -1,0 +1,13 @@
+.ford-logo {
+  height: 50px;
+  object-fit: contain;
+}
+
+.gradient-background {
+  /* Gradiente linear */
+  background: linear-gradient(to top, #0a22db, #0c0c0c); 
+ 
+  min-height: 100vh; 
+  width: 100%;
+}
+
